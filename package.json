@@ -1,0 +1,31 @@
+{
+  "name": "http-fetch-retry",
+  "version": "1.0.0",
+  "description": "HttpClient con reintento nativo en fetch Node.js",
+  "main": "src/index.cjs",
+  "module": "src/index.mjs",
+  "exports": {
+    "import": "./src/index.mjs",
+    "require": "./src/index.cjs"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "http",
+    "fetch",
+    "retry",
+    "http-client",
+    "esm",
+    "cjs"
+  ],
+  "author": "Omar Moroso",
+  "license": "MIT",
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
