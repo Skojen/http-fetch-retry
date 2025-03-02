@@ -22,7 +22,7 @@ import { HttpClient } from 'http-fetch-retry';
 async function makeRequest() {
   try {
     const response = await HttpClient.fetchWithRetry({ url: 'https://api.example.com' });
-    console.log(data);
+    console.log(response);
   } catch (error) {
     console.error('Error:', error);
   }
@@ -39,7 +39,7 @@ const { HttpClient } = require('http-fetch-retry');
 async function makeRequest() {
   try {
     const response = await HttpClient.fetchWithRetry({ url: 'https://api.example.com' });
-    console.log(data);
+    console.log(response);
   } catch (error) {
     console.error('Error:', error);
   }

@@ -29,7 +29,7 @@ export class HttpClient {
 
     for (let retries = 0; retries < maxRetries; retries++) {
       try {
-        return await this.fetchWithRetry(request, timeout);
+        return await this.fetchWithTimeout(request, timeout);
       } catch (error) {
         if (
           error instanceof FetchTimeoutError ||
@@ -105,7 +105,7 @@ export class HttpClient {
   
       console.error(`HttpClient.fetchWithTimeout[ERR] [${error}]`);
       
-      if (error.name === "AbortError") {
+      if (error.name === 'AbortError') {
         throw new FetchTimeoutError(`Fetch request to ${request.url} timed out after ${timeout}ms`);
       }
       
